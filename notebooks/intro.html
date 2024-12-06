@@ -365,6 +365,7 @@
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-define-variables">How to Define Variables ?</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-the-function-of-a-varible">Get the function of a varible</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-conversion-casting">Type Conversion (Casting)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#operators">Operators</a></li>
 </ul>
 </li>
 </ul>
@@ -533,7 +534,126 @@ True
 </div>
 <div class="dropdown admonition note">
 <p class="admonition-title">Note</p>
-<p>The note body will be hidden!</p>
+<p>try to cast the string “False” to a boolean, but before , in your opinion what is resault ?</p>
+</div>
+</section>
+<section id="operators">
+<h4>Operators<a class="headerlink" href="#operators" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Arithmetic Operators
+Used to perform basic mathematical operations.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> (Addition): Adds two numbers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> (Subtraction): Subtracts the second number from the first.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> (Multiplication): Multiplies two numbers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> (Division): Divides the first number by the second.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">//</span></code> (Floor Division): Divides and returns the largest integer less than or equal to the result.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%</span></code> (Modulus): Returns the remainder of a division.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**</span></code> (Exponentiation): Raises the first number to the power of the second.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Addition:&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>         <span class="c1"># 13</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Subtraction:&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>      <span class="c1"># 7</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Multiplication:&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># 30</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Division:&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>         <span class="c1"># 3.333...</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Floor Division:&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Modulus:&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>          <span class="c1"># 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exponentiation:&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 1000</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Addition: 13
+Subtraction: 7
+Multiplication: 30
+Division: 3.3333333333333335
+Floor Division: 3
+Modulus: 1
+Exponentiation: 1000
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Comparison Operators
+Used to compare two values and return a boolean (True or False).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> (Equal): Checks if two values are equal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">!=</span></code> (Not Equal): Checks if two values are not equal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>(Greater Than): Checks if the first value is greater than the second.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>(Less Than): Checks if the first value is less than the second.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> (Greater Than or Equal To).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> (Less Than or Equal To).
+<strong>Examples:</strong></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x equals y:&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>      <span class="c1"># False</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x not equals y:&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x greater than y:&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># False</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x less than y:&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>    <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x equals y: False
+x not equals y: True
+x greater than y: False
+x less than y: True
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Logical Operators
+Used to combine conditional statements.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">and</span></code>: Returns True if both conditions are true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">or</span></code> : Returns True if at least one condition is true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">not</span></code>: Reverses the boolean value.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a and b:&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># False</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a or b:&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="ow">or</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not a:&quot;</span><span class="p">,</span> <span class="ow">not</span> <span class="n">a</span><span class="p">)</span>     <span class="c1"># False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a and b: False
+a or b: True
+not a: False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Tip</p>
+<p>you can use special assignment operators like <code class="docutils literal notranslate"><span class="pre">+=</span></code> , <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">*=</span></code>, <code class="docutils literal notranslate"><span class="pre">/=</span></code>, <code class="docutils literal notranslate"><span class="pre">%=</span></code>, <code class="docutils literal notranslate"><span class="pre">//=</span></code>, <code class="docutils literal notranslate"><span class="pre">**=</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">3</span>  <span class="c1"># Same as x = x + 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x after += 3:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># 8</span>
+<span class="n">x</span> <span class="o">*=</span> <span class="mi">2</span>  <span class="c1"># Same as x = x * 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x after *= 2:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># 16</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 </section>
 </section>
@@ -604,6 +724,7 @@ True
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-define-variables">How to Define Variables ?</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-the-function-of-a-varible">Get the function of a varible</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-conversion-casting">Type Conversion (Casting)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#operators">Operators</a></li>
 </ul>
 </li>
 </ul>
@@ -622,7 +743,7 @@ True
   <div class="footer-item">
     
 <p class="component-author">
-By B A.J Amar
+By Amar A.J Bouakaz
 </p>
 
   </div>
