@@ -18,13 +18,31 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-try /catch
+user_name = input("Enter your name: ")
+user_age = input("Enter your age: ")
+
+print("User Name:", user_name)
+print("User Age:", user_age)
 ------------------
 
 
-[1;36m  Cell [1;32mIn[8], line 1[1;36m[0m
-[1;33m    try /catch[0m
-[1;37m        ^[0m
-[1;31mSyntaxError[0m[1;31m:[0m expected ':'
+[1;31m---------------------------------------------------------[0m
+[1;31mStdinNotImplementedError[0mTraceback (most recent call last)
+Cell [1;32mIn[12], line 1[0m
+[1;32m----> 1[0m user_name [38;5;241m=[39m [38;5;28;43minput[39;49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mEnter your name: [39;49m[38;5;124;43m"[39;49m[43m)[49m
+[0;32m      2[0m user_age [38;5;241m=[39m [38;5;28minput[39m([38;5;124m"[39m[38;5;124mEnter your age: [39m[38;5;124m"[39m)
+[0;32m      4[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mUser Name:[39m[38;5;124m"[39m, user_name)
 
+File [1;32m~\AppData\Roaming\Python\Python312\site-packages\ipykernel\kernelbase.py:1281[0m, in [0;36mKernel.raw_input[1;34m(self, prompt)[0m
+[0;32m   1279[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_allow_stdin:
+[0;32m   1280[0m     msg [38;5;241m=[39m [38;5;124m"[39m[38;5;124mraw_input was called, but this frontend does not support input requests.[39m[38;5;124m"[39m
+[1;32m-> 1281[0m     [38;5;28;01mraise[39;00m StdinNotImplementedError(msg)
+[0;32m   1282[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_input_request(
+[0;32m   1283[0m     [38;5;28mstr[39m(prompt),
+[0;32m   1284[0m     [38;5;28mself[39m[38;5;241m.[39m_parent_ident[[38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m],
+[0;32m   1285[0m     [38;5;28mself[39m[38;5;241m.[39mget_parent([38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m),
+[0;32m   1286[0m     password[38;5;241m=[39m[38;5;28;01mFalse[39;00m,
+[0;32m   1287[0m )
+
+[1;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
 
