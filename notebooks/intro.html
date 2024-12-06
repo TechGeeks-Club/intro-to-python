@@ -366,7 +366,12 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#type-conversion-casting">Type Conversion (Casting)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operators">2.3 Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operators">2.3 Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">Arithmetic Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">Comparison Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators">Logical Operators</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions">2.4 Conditions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">2.5 Loops</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop">1. for Loop</a></li>
@@ -374,6 +379,12 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-output">2.6 Input/Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcions">2.7 Funcions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex1-print-positive-even-numbers">Ex1 : Print Positive Even Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex2-grade-average-calculator">Ex2: Grade Average Calculator</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -463,6 +474,11 @@ Favorite Food: None
 </div>
 </div>
 </div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Tip</p>
+<p>you can change the type or the value of the variable any time with any type
+<code class="docutils literal notranslate"><span class="pre">python</span>&#160;&#160;&#160;&#160; <span class="pre">x</span> <span class="pre">=</span> <span class="pre">10</span> <span class="pre">#</span> <span class="pre">int</span>&#160;&#160;&#160;&#160; <span class="pre">x</span> <span class="pre">=</span> <span class="pre">&quot;hello&quot;</span> <span class="pre">#string</span>&#160;&#160;&#160;&#160; </code></p>
+</div>
 </section>
 <section id="get-the-function-of-a-varible">
 <h3>Get the function of a varible<a class="headerlink" href="#get-the-function-of-a-varible" title="Link to this heading">#</a></h3>
@@ -522,10 +538,10 @@ True
 </section>
 <section id="operators">
 <h2>2.3 Operators<a class="headerlink" href="#operators" title="Link to this heading">#</a></h2>
+<section id="arithmetic-operators">
+<h3>Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Link to this heading">#</a></h3>
+<p>Used to perform basic mathematical operations.</p>
 <ul class="simple">
-<li><p>Arithmetic Operators
-Used to perform basic mathematical operations.</p>
-<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> (Addition): Adds two numbers.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> (Subtraction): Subtracts the second number from the first.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> (Multiplication): Multiplies two numbers.</p></li>
@@ -533,8 +549,6 @@ Used to perform basic mathematical operations.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">//</span></code> (Floor Division): Divides and returns the largest integer less than or equal to the result.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">%</span></code> (Modulus): Returns the remainder of a division.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">**</span></code> (Exponentiation): Raises the first number to the power of the second.</p></li>
-</ul>
-</li>
 </ul>
 <p><strong>Examples:</strong></p>
 <div class="cell docutils container">
@@ -563,18 +577,17 @@ Exponentiation: 1000
 </div>
 </div>
 </div>
+</section>
+<section id="comparison-operators">
+<h3>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Link to this heading">#</a></h3>
+<p>Used to compare two values and return a boolean (True or False).</p>
 <ul class="simple">
-<li><p>Comparison Operators
-Used to compare two values and return a boolean (True or False).</p>
-<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> (Equal): Checks if two values are equal.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">!=</span></code> (Not Equal): Checks if two values are not equal.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>(Greater Than): Checks if the first value is greater than the second.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>(Less Than): Checks if the first value is less than the second.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> (Greater Than or Equal To).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> (Less Than or Equal To).</p></li>
-</ul>
-</li>
 </ul>
 <p><strong>Examples:</strong></p>
 <div class="cell docutils container">
@@ -597,15 +610,14 @@ x less than y: True
 </div>
 </div>
 </div>
+</section>
+<section id="logical-operators">
+<h3>Logical Operators<a class="headerlink" href="#logical-operators" title="Link to this heading">#</a></h3>
+<p>Used to combine conditional statements.</p>
 <ul class="simple">
-<li><p>Logical Operators
-Used to combine conditional statements.</p>
-<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">and</span></code>: Returns True if both conditions are true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">or</span></code> : Returns True if at least one condition is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">not</span></code>: Reverses the boolean value.</p></li>
-</ul>
-</li>
 </ul>
 <p><strong>Examples:</strong></p>
 <div class="cell docutils container">
@@ -640,6 +652,7 @@ not a: False
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
+</section>
 </section>
 <section id="conditions">
 <h2>2.4 Conditions<a class="headerlink" href="#conditions" title="Link to this heading">#</a></h2>
@@ -729,6 +742,7 @@ not a: False
 </section>
 <section id="input-output">
 <h2>2.6 Input/Output<a class="headerlink" href="#input-output" title="Link to this heading">#</a></h2>
+<p>to ask the user to enter a value you can use <code class="docutils literal notranslate"><span class="pre">input</span></code> function</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name: &quot;</span><span class="p">)</span>
@@ -740,8 +754,8 @@ not a: False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name: &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">user_age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your age: &quot;</span><span class="p">)</span>
@@ -763,6 +777,78 @@ not a: False
 </div>
 </div>
 </div>
+</section>
+<section id="funcions">
+<h2>2.7 Funcions<a class="headerlink" href="#funcions" title="Link to this heading">#</a></h2>
+<p>A function is a block of code that performs a specific task. Instead of writing the same code multiple times, you can define a function and call it whenever needed.
+They help to organize and reuse code efficiently.</p>
+<p><strong>Syntax :</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span>
+    <span class="c1"># Code block (body of the function)</span>
+    <span class="k">return</span> <span class="n">value</span>  <span class="c1"># Optional</span>
+</pre></div>
+</div>
+<p><strong>Exemples :</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Basic function</span>
+<span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, welcome to the Python workshop!&quot;</span><span class="p">)</span>
+    
+<span class="n">say_hello</span><span class="p">()</span> <span class="c1"># Output: Hello, welcome to the Python workshop!</span>
+
+
+<span class="c1"># Function with parameters</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello,&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="n">hello</span><span class="p">(</span><span class="s2">&quot;amar&quot;</span><span class="p">)</span> <span class="c1"># Output: Hello, amar</span>
+
+
+<span class="c1"># Function with return value</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1"># Output: 8</span>
+
+
+
+<span class="c1"># Function with default parameter</span>
+<span class="k">def</span> <span class="nf">hello_2</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Guest&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello,&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercises">
+<h2>Exercises:<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
+<section id="ex1-print-positive-even-numbers">
+<h3>Ex1 : Print Positive Even Numbers<a class="headerlink" href="#ex1-print-positive-even-numbers" title="Link to this heading">#</a></h3>
+<p><strong>Objective:</strong>
+Ask the user to input an integer and print all positive even numbers from 0 to the inputted value.</p>
+<p><strong>Note :</strong>
+The user input should be grater than 0 and less than 1000</p>
+<p><strong>Example:</strong>
+If the user inputs <code class="docutils literal notranslate"><span class="pre">10</span></code>, the output should be:
+<code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">2</span> <span class="pre">4</span> <span class="pre">6</span> <span class="pre">8</span></code></p>
+</section>
+<section id="ex2-grade-average-calculator">
+<h3>Ex2: Grade Average Calculator<a class="headerlink" href="#ex2-grade-average-calculator" title="Link to this heading">#</a></h3>
+<p><strong>Objective:</strong>
+Create a grade average calculator for a module. The calculator should ask the user if the module contains TP (practical work). If yes, then the TP and TD (tutorial) are 20% each, and the exam is 60%. Otherwise, the TD is 40% and the exam is 60%. The calculator should then ask the user for their grades in the exam, TD, and TP (if applicable), and calculate the final grade. Note that the grades should be between 0 and 20.</p>
+<p><strong>Example:</strong>
+If the module contains TP and the user enters the following grades:</p>
+<ul class="simple">
+<li><p>Exam: 15</p></li>
+<li><p>TD: 18</p></li>
+<li><p>TP: 17.5</p></li>
+</ul>
+<p>The final grade will be calculated as:
+<code class="docutils literal notranslate"><span class="pre">Final</span> <span class="pre">Grade</span> <span class="pre">=</span> <span class="pre">(Exam</span> <span class="pre">*</span> <span class="pre">0.6)</span> <span class="pre">+</span> <span class="pre">(TD</span> <span class="pre">*</span> <span class="pre">0.2)</span> <span class="pre">+</span> <span class="pre">(TP</span> <span class="pre">*</span> <span class="pre">0.2)</span></code></p>
+</section>
 </section>
 </section>
 
@@ -830,7 +916,12 @@ not a: False
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#type-conversion-casting">Type Conversion (Casting)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operators">2.3 Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operators">2.3 Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">Arithmetic Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">Comparison Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators">Logical Operators</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions">2.4 Conditions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">2.5 Loops</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop">1. for Loop</a></li>
@@ -838,6 +929,12 @@ not a: False
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-output">2.6 Input/Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcions">2.7 Funcions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex1-print-positive-even-numbers">Ex1 : Print Positive Even Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex2-grade-average-calculator">Ex2: Grade Average Calculator</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
