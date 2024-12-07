@@ -1,4 +1,4 @@
-# Welcome to Intor To Python Jupyter Book
+# Welcome to Introduction To Python Jupyter Book
 
 
 
