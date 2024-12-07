@@ -9,3 +9,5 @@ parts:
     chapters:
     - file : notebooks/env
     - file : notebooks/intro
+    - file : notebooks/string-methods
+    - file : notebooks/string-format
