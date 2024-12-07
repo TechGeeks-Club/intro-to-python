@@ -63,6 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/ltds';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Manipulating Files in Python" href="files.html" />
     <link rel="prev" title="4. String Formatting" href="string-format.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -174,6 +175,7 @@
 <li class="toctree-l1"><a class="reference internal" href="string-methods.html">3. String Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="string-format.html">4. String Formatting</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lists, Tuples, Sets, and Dictionaries in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">Manipulating Files in Python</a></li>
 </ul>
 
     </div>
@@ -390,7 +392,10 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-data-structures"><strong>Comparison of Data Structures</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex1-palindrome">EX1: Palindrome</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex1-sorts-a-tuple">EX1: Sorts a tuple</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ex2-password-manager">EX2: Password Manager</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -567,14 +572,14 @@ cherry
 </div>
 <div class="note dropdown admonition">
 <p class="admonition-title">Question ?</p>
-<p>lets say that we have:</p>
+<p>can we append a list in tuple ?
+lets say that we have:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">3.14</span><span class="p">,</span><span class="kc">True</span><span class="p">,[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">])</span>
 
 <span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<p>can we append the last array in</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -768,13 +773,23 @@ Alice
 <hr class="docutils" />
 <section id="exercices">
 <h2>Exercices<a class="headerlink" href="#exercices" title="Link to this heading">#</a></h2>
-<section id="ex1-palindrome">
-<h3>EX1: Palindrome<a class="headerlink" href="#ex1-palindrome" title="Link to this heading">#</a></h3>
+<section id="ex1-sorts-a-tuple">
+<h3>EX1: Sorts a tuple<a class="headerlink" href="#ex1-sorts-a-tuple" title="Link to this heading">#</a></h3>
 <p><strong>Objective:</strong>
 write a program that sorts a tuple and remove duplicated values</p>
 <p><strong>Exemple :</strong></p>
 <p>Input: t = (4,1,4,2,3,5,5)</p>
 <p>Output: t = (1,2,3,4,5)</p>
+<section id="ex2-password-manager">
+<h4>EX2: Password Manager<a class="headerlink" href="#ex2-password-manager" title="Link to this heading">#</a></h4>
+<p><strong>Objective:</strong></p>
+<p>Make a password manager that allows the user to:</p>
+<p>Add a new password entry.
+Display all stored passwords.
+Remove an entry by site.
+Search for a password by site name.
+This implementation stores data in a dictionary in memory.</p>
+</section>
 </section>
 </section>
 </section>
@@ -817,6 +832,15 @@ write a program that sorts a tuple and remove duplicated values</p>
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">4. String Formatting</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="files.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Manipulating Files in Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -864,7 +888,10 @@ write a program that sorts a tuple and remove duplicated values</p>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-data-structures"><strong>Comparison of Data Structures</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex1-palindrome">EX1: Palindrome</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex1-sorts-a-tuple">EX1: Sorts a tuple</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ex2-password-manager">EX2: Password Manager</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

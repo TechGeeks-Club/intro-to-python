@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. String Formatting &#8212; Introduction To Python</title>
+    <title>Manipulating Files in Python &#8212; Introduction To Python</title>
   
   
   
@@ -60,11 +60,10 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/string-format';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/files';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lists, Tuples, Sets, and Dictionaries in Python" href="ltds.html" />
-    <link rel="prev" title="3. String Methods" href="string-methods.html" />
+    <link rel="prev" title="Lists, Tuples, Sets, and Dictionaries in Python" href="ltds.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -173,9 +172,9 @@
 <li class="toctree-l1"><a class="reference internal" href="env.html">1. setup the enviroment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="intro.html">2. python basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="string-methods.html">3. String Methods</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. String Formatting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="string-format.html">4. String Formatting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ltds.html">Lists, Tuples, Sets, and Dictionaries in Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="files.html">Manipulating Files in Python</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Manipulating Files in Python</a></li>
 </ul>
 
     </div>
@@ -247,7 +246,7 @@
       
       
       
-      <li><a href="https://github.com/B-AJ-Amar/CSE3-PW/issues/new?title=Issue%20on%20page%20%2Fnotebooks/string-format.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/B-AJ-Amar/CSE3-PW/issues/new?title=Issue%20on%20page%20%2Fnotebooks/files.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -277,7 +276,7 @@
       
       
       
-      <li><a href="../_sources/notebooks/string-format.ipynb" target="_blank"
+      <li><a href="../_sources/notebooks/files.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -353,7 +352,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>4. String Formatting</h1>
+    <h1>Manipulating Files in Python</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -363,11 +362,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-old-way">The old way</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-str-format-method">Using <code class="docutils literal notranslate"><span class="pre">str.format()</span></code> Method</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-string-formatting">Advanced String Formatting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-and-closing-files">1. Opening and Closing Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-files">2. Reading Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-to-files">Writing to Files</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex1-piramide">EX1: piramide</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex2-password-manager">EX2: Password Manager</a></li>
 </ul>
 </li>
 </ul>
@@ -381,143 +382,106 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="string-formatting">
-<h1>4. String Formatting<a class="headerlink" href="#string-formatting" title="Link to this heading">#</a></h1>
-<section id="the-old-way">
-<h2>The old way<a class="headerlink" href="#the-old-way" title="Link to this heading">#</a></h2>
+  <section id="manipulating-files-in-python">
+<h1>Manipulating Files in Python<a class="headerlink" href="#manipulating-files-in-python" title="Link to this heading">#</a></h1>
+<p>Python makes it easy to work with files for tasks such as reading, writing, and appending data. Let’s explore how to handle files step by step.</p>
+<hr class="docutils" />
+<section id="opening-and-closing-files">
+<h2>1. Opening and Closing Files<a class="headerlink" href="#opening-and-closing-files" title="Link to this heading">#</a></h2>
+<p>To work with files, you need to open them using the open() function and specify the mode:</p>
 <ul class="simple">
-<li><p>Format Specifiers:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">%s</span></code>: String</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">%d</span></code>: Integer</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">%f</span></code>: Float (use %.nf to specify number of decimal places)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">%x</span></code>: Hexadecimal integer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → Read (default mode)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">w</span></code> → Write (overwrites file if it exists)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> → Append (adds data to the end of the file)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> → Create (fails if the file already exists)</p></li>
 </ul>
-</li>
-</ul>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;filename.txt&quot;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">mode</span><span class="o">&gt;</span><span class="p">)</span>  <span class="c1"># Open the file</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># Always close the file when done</span>
+</pre></div>
+</div>
+<p>Python also supports the with statement, which automatically closes the file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;filename.txt&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="c1"># Perform file operations</span>
+    <span class="k">pass</span>  <span class="c1"># File is automatically closed</span>
+
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
-<span class="n">weight</span> <span class="o">=</span> <span class="mf">70.622</span>
-
-<span class="c1"># Using the % operator</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, </span><span class="si">%s</span><span class="s2">!&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>  <span class="c1"># Output: Hello, Alice!</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your weight is </span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">weight</span><span class="p">)</span>  <span class="c1"># Output: Your balance is 70.62</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, Alice!
-Your weight is 70.62
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Roaming\Python\Python312\site-packages\IPython\core\interactiveshell.py:324,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">317</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">324</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;example.txt&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="using-str-format-method">
-<h2>Using <code class="docutils literal notranslate"><span class="pre">str.format()</span></code> Method<a class="headerlink" href="#using-str-format-method" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
-<span class="n">balance</span> <span class="o">=</span> <span class="mf">50.75</span>
-
-<span class="c1"># Using the .format() method</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, </span><span class="si">{}</span><span class="s2">!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>  <span class="c1"># Output: Hello, Alice!</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your balance is </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">balance</span><span class="p">))</span>  <span class="c1"># Output: Your balance is 50.75</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, </span><span class="si">{}</span><span class="s2">. Your balance is </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">balance</span><span class="p">))</span>  
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, </span><span class="si">{name}</span><span class="s2">. Your balance is </span><span class="si">{balance}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">balance</span><span class="o">=</span><span class="n">balance</span><span class="p">))</span>  
+<section id="reading-files">
+<h2>2. Reading Files<a class="headerlink" href="#reading-files" title="Link to this heading">#</a></h2>
+<p>Reading the Entire File</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, Alice!
-Your balance is 50.75
-Hello, Alice. Your balance is 50.75.
-Hello, Alice. Your balance is 50.75.
+<p>Reading Line by Line</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>  <span class="c1"># Remove newline characters</span>
 </pre></div>
 </div>
+<p>Reading Specific Lines</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>  <span class="c1"># Returns a list of lines</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Print the first line</span>
+
+</pre></div>
 </div>
+<section id="writing-to-files">
+<h3>Writing to Files<a class="headerlink" href="#writing-to-files" title="Link to this heading">#</a></h3>
+<p>Overwriting File Content</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is a new line.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Overwriting existing content.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Appending to a File</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">This is an appended line.&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
 </section>
-<section id="advanced-string-formatting">
-<h2>Advanced String Formatting<a class="headerlink" href="#advanced-string-formatting" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Padding and Aligning Strings
-F-strings and str.format() allow you to align text and pad strings with spaces, zeros, or other characters.</p>
-<ul>
-<li><p>Align Left: :&lt;(width)</p></li>
-<li><p>Align Right: :&gt;(width)</p></li>
-<li><p>Center Align: :^(width)</p></li>
-<li><p>Padding: :0(width)</p></li>
-</ul>
-</li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
-
-<span class="c1"># Left align</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">text</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: &#39;Python    &#39;</span>
-<span class="c1"># Right align</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">text</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: &#39;    Python&#39;</span>
-<span class="c1"># Center align</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">text</span><span class="si">:</span><span class="s2">^10</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: &#39;  Python  &#39;</span>
-<span class="c1"># Pad with zeros</span>
-<span class="n">number</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number</span><span class="si">:</span><span class="s2">03</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: 007</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python    
-    Python
-  Python  
-007
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># formating numbers</span>
-
-<span class="n">price</span> <span class="o">=</span> <span class="mf">123456.789</span>
-<span class="c1"># Using f-strings</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Price: </span><span class="si">{</span><span class="n">price</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: Price: 123,456.79</span>
-
-<span class="n">percentage</span> <span class="o">=</span> <span class="mf">0.1234</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Percentage: </span><span class="si">{</span><span class="n">percentage</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: Percentage: 12.34%</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Price: 123,456.79
-Percentage: 12.34%
-</pre></div>
-</div>
-</div>
-</div>
 </section>
+<hr class="docutils" />
 <section id="exercices">
 <h2>Exercices<a class="headerlink" href="#exercices" title="Link to this heading">#</a></h2>
-<section id="ex1-piramide">
-<h3>EX1: piramide<a class="headerlink" href="#ex1-piramide" title="Link to this heading">#</a></h3>
+<section id="ex2-password-manager">
+<h3>EX2: Password Manager<a class="headerlink" href="#ex2-password-manager" title="Link to this heading">#</a></h3>
 <p><strong>Objective:</strong></p>
-<p>write program that creates piramide</p>
-<p><strong>Exemple :</strong></p>
-<p>Input: 5</p>
-<p>Output:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="o">*</span>
-   <span class="o">***</span>
-  <span class="o">*****</span>
- <span class="o">*******</span>
-<span class="o">*********</span>
-</pre></div>
-</div>
+<p>Refactor the old  password manager :
+instead of python data stcucture use a file to store data</p>
 </section>
 </section>
 </section>
@@ -553,22 +517,13 @@ Percentage: 12.34%
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="string-methods.html"
+       href="ltds.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">3. String Methods</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="ltds.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Lists, Tuples, Sets, and Dictionaries in Python</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -587,11 +542,13 @@ Percentage: 12.34%
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-old-way">The old way</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-str-format-method">Using <code class="docutils literal notranslate"><span class="pre">str.format()</span></code> Method</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-string-formatting">Advanced String Formatting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-and-closing-files">1. Opening and Closing Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-files">2. Reading Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-to-files">Writing to Files</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex1-piramide">EX1: piramide</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex2-password-manager">EX2: Password Manager</a></li>
 </ul>
 </li>
 </ul>
